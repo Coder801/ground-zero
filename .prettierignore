@@ -2,3 +2,5 @@ theme/
 .next/
 out/
 package-lock.json
+docs/
+public/3-month-plan.html

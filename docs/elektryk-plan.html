@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Эксперимент: электрик, 3 месяца</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f4f5f3; --sheet:#fff; --ink:#1b1e22; --muted:#5d636b; --line:#d3d6d9;
+  --n:#2457a4; --l:#7a4a2a; --pe1:#d9b200; --pe2:#2f8a3e;
+  --f:"Roboto",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --m:"Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#15181c; --sheet:#1d2126; --ink:#e7e9eb; --muted:#9aa1a9; --line:#343a41;
+  --n:#6d9be0; --l:#c08a63; --pe1:#e3c43a; --pe2:#4fb062; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--f);padding:32px 16px 64px}
+main{max-width:860px;margin:0 auto;display:grid;gap:40px}
+h1,h2,h3{line-height:1.2;margin:0;text-wrap:balance}
+h1{font-size:clamp(1.9rem,5vw,2.6rem);font-weight:700}
+h2{font-size:1.5rem;font-weight:700;display:flex;gap:12px;align-items:baseline}
+h2 .qf{font:500 .9rem var(--m);color:var(--n)}
+h3{font-size:1.1rem;font-weight:500;margin-top:8px}
+p{margin:0}
+section{display:grid;gap:14px}
+.meta{font:400 .8rem var(--m);color:var(--muted);letter-spacing:.04em}
+.lead{font-size:1.1rem;color:var(--muted);max-width:65ch}
+.cable{display:flex;gap:4px;height:6px;width:96px}
+.cable i{flex:1;border-radius:3px}
+.cable i:nth-child(1){background:var(--l)}.cable i:nth-child(2){background:var(--n)}
+.cable i:nth-child(3){background:repeating-linear-gradient(90deg,var(--pe1) 0 8px,var(--pe2) 8px 16px)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .75rem var(--m);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.tasks{list-style:none;padding:0}
+.tasks label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.tasks input{margin-top:5px;accent-color:var(--n);flex:none}
+.tasks input:checked + span{color:var(--muted);text-decoration:line-through}
+blockquote{margin:0;padding:14px 18px;border-left:3px solid var(--n);background:var(--sheet);border-radius:0 6px 6px 0;display:grid;gap:6px}
+.note{font-size:.95rem;color:var(--muted)}
+a{color:var(--n)}
+.months{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.month{background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:16px;display:grid;gap:10px;align-content:start}
+.month .goal{font:500 .8rem var(--m);color:var(--n)}
+footer{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head>
+<body>
+<main>
+
+<header style="display:grid;gap:12px">
+  <div class="cable" aria-hidden="true"><i></i><i></i><i></i></div>
+  <h1>Эксперимент: электрик, 3 месяца</h1>
+  <p class="meta">14.10.2026 → точка решения 15.01.2027 · Дмитро</p>
+  <p class="lead">Цель — 30–50 тыс. грн/мес за работу (без материалов) к середине января. На вечерах и выходных это достижимо только через один крупный объект в месяц, а не через мелкие вызовы.</p>
+</header>
+
+<section>
+  <h2><span class="qf">QF1</span>Цель и экономика</h2>
+  <p><b>Сколько часов есть.</b> Основная работа в институте заканчивается до 17:00, дальше время свободно. Под заказы: 3–4 будних вечера по 3 часа + суббота целиком, воскресенье — резерв под объекты. Это 20–25 часов в неделю, около 90 в месяц.</p>
+  <p><b>Что даёт рынок</b> (работа без материалов, Киев, 2026):</p>
+  <div class="tbl"><table>
+    <tr><th>Тип работы</th><th>Цена</th><th>Сколько нужно на 30 тыс.</th></tr>
+    <tr><td>Мелкий вызов (розетка, автомат, поиск неисправности)</td><td>500–1 500 грн</td><td>25–35 выездов — нереально вечерами</td></tr>
+    <tr><td>Электрика 1-комнатной под ключ</td><td>30 000–70 000 грн</td><td>1 объект</td></tr>
+    <tr><td>Сборка щита / подключение инвертора</td><td>уточнить по 10 объявлениям OLX</td><td>4–6 заказов</td></tr>
+  </table></div>
+  <p><b>Вывод.</b> Мелочь нужна только в первый месяц — ради отзывов. Деньги делают объекты и щиты с резервным питанием. Средняя зарплата электрика в Киеве — около 40 тыс. грн на полной ставке.</p>
+  <p><b>Цена времени.</b> Каждый час на заказах — час, снятый с собственного ремонта. Это выгодно, пока ставка за час выше, чем стоило бы нанять мастера на свою квартиру.</p>
+</section>
+
+<section>
+  <h2><span class="qf">QF2</span>Позиционирование и прайс</h2>
+  <p>Не «електрик на все» — таких сотни. Ниша: <b>щиты и резервное питание для квартир + электрика под ремонт</b>. Зима и отключения делают инверторы самым горячим запросом, а у тебя уже есть подключённый гибридный инвертор.</p>
+  <h3>Чем отличаться от бригад</h3>
+  <ul>
+    <li>Схема щита и разводки до начала работ, маркировка автоматов</li>
+    <li>Фото каждой стены со штробами до штукатурки — клиент знает, где кабель</li>
+    <li>Итоговый пакет: схема + фото + список автоматов в PDF</li>
+    <li>Бронь: не исчезнешь посреди объекта</li>
+  </ul>
+  <p><b>Портфолио, которое уже есть:</b> 5 собранных щитов, проводка, инвертор, своя квартира как кейс. Нужны хорошие фото и короткие подписи «что было — что сделал».</p>
+  <h3>Дополнительные услуги — онлайн, без дороги, вечером</h3>
+  <ul>
+    <li><b>Консультации:</b> подбор инвертора и АКБ, проект щита и групп под ремонт, аудит электрики перед покупкой квартиры. Фиксированная цена, при заказе работ засчитывается в смету.</li>
+    <li><b>Чертежи и документация:</b> однолинейные схемы щитов, планы разводки, чертежи в DWG/DXF, 3D-модели деталей и корпусов. Клиенты — частники под ремонт, бригады, мелкие производства.</li>
+  </ul>
+  <h3>Прайс на старт — на 10–15% ниже медианы, после 5 отзывов поднять до рынка</h3>
+  <ul class="tasks">
+    <li><label><input type="checkbox" id="t1"><span>Собрать цены из 10 объявлений OLX и 10 профилей Kabanchik: выезд, точка, штроба/м, щит, инвертор</span></label></li>
+    <li><label><input type="checkbox" id="t2"><span>Цены на консультацию и чертёж — по 5–10 объявлениям</span></label></li>
+    <li><label><input type="checkbox" id="t3"><span>Свести в прайс на одну страницу</span></label></li>
+    <li><label><input type="checkbox" id="t4"><span>Минимальный выезд — не ниже 600–800 грн, иначе дорога съедает смысл</span></label></li>
+    <li><label><input type="checkbox" id="t5"><span>Объекты — только по смете после замера, замер бесплатный при заказе</span></label></li>
+    <li><label><input type="checkbox" id="t6"><span>Писать в объявлениях только те программы, в которых реально работаешь</span></label></li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="qf">QF3</span>Тексты объявлений</h2>
+  <p class="note">Время работы не указано; бронь подана как надёжность для клиента.</p>
+  <h3>Основное объявление (OLX / Kabanchik)</h3>
+  <p>Заголовок: <i>Електрик Київ — електрощити, резервне живлення, проводка під ремонт</i></p>
+  <blockquote>
+    <p>Інженерний підхід до електрики у квартирі.</p>
+    <p><b>Що роблю:</b><br>— збірка та монтаж електрощитів<br>— підключення гібридних інверторів і резервного живлення<br>— електромонтаж під ремонт: штроблення, прокладання кабелю, підрозетники<br>— заміна та доробка старої проводки, розетки, освітлення<br>— пошук і усунення несправностей<br>— консультації: підбір інвертора, проєкт щита, аудит електрики<br>— креслення та документація: однолінійні схеми, плани розводки, DWG/DXF, 3D-моделі</p>
+    <p><b>Чому зі мною спокійно:</b><br>— схема щита й розводки до початку робіт<br>— фото всіх штроб до штукатурки — завжди знатимете, де йде кабель<br>— після робіт віддаю схему, фото та маркування автоматів<br>— маю наявне бронювання: не зникну посеред об'єкта<br>— свій інструмент, перевірені магазини матеріалів зі знижкою — закуплю дешевше, ніж у роздробі</p>
+    <p>Виїзд на замір і кошторис для об'єктів — безкоштовно при замовленні.<br>Пишіть або телефонуйте, узгодимо зручний час.</p>
+  </blockquote>
+  <h3>Короткий — для чатов ЖК и Telegram</h3>
+  <blockquote><p>Сусіди, я електрик, живу в нашому ЖК. Збираю щити, підключаю інвертори, роблю проводку під ремонт. Схема + фото штроб після робіт. Маю бронювання. Пишіть в особисті — підкажу безкоштовно, якщо питання дрібне.</p></blockquote>
+  <h3>Тёплый пост — для своих соцсетей</h3>
+  <blockquote><p>Окрім коду, давно займаюся електрикою: зібрав 5 щитів, підключав гібридний інвертор, роблю проводку у своїй квартирі. Тепер беру замовлення в Києві — щити, резервне живлення, проводка під ремонт. Якщо вам або знайомим це потрібно перед зимою — пишіть.</p></blockquote>
+  <p class="note">К каждому объявлению — 6–10 фото: щиты крупно, инвертор, штробы с кабелем, готовый щит с маркировкой.</p>
+</section>
+
+<section>
+  <h2><span class="qf">QF4</span>Каналы поиска заказов</h2>
+  <p>Самые тёплые каналы — свой ЖК, знакомые и прорабы; площадки нужны в первую очередь ради отзывов.</p>
+  <div class="tbl"><table>
+    <tr><th>Канал</th><th>Для чего</th><th>Как работать</th><th>Стоимость</th></tr>
+    <tr><td>Чат своего ЖК и соседних новостроек</td><td>Ремонты рядом, без дороги</td><td>Короткий текст раз в 3–4 недели; отвечать на вопросы бесплатно</td><td>0</td></tr>
+    <tr><td>Знакомые, IT-окружение</td><td>Инверторы, щиты, новостройки</td><td>Тёплый пост + личные сообщения 20–30 людям</td><td>0</td></tr>
+    <tr><td>Kabanchik.ua</td><td>Первые отзывы, мелкие заказы</td><td>Отклик в первые 15 минут после публикации задачи</td><td>Платные отклики</td></tr>
+    <tr><td>OLX Услуги</td><td>Основной поток по ремонтам</td><td>Объявление + поднятие раз в неделю, отдельное — на «щиты и інвертори»</td><td>Платное поднятие</td></tr>
+    <tr><td>Прорабы и бригады ремонта</td><td>Постоянный поток объектов</td><td>Найти 2–3 через Telegram/FB-группы строителей, предложить субподряд</td><td>0, но ниже цена</td></tr>
+    <tr><td>Свои магазины материалов</td><td>Рекомендации покупателей</td><td>Оставить визитки, попросить советовать</td><td>0</td></tr>
+    <tr><td>Установщики солнечных станций</td><td>Субподряд по щитам и АВР</td><td>Предложить себя как электрика на квартиры</td><td>0</td></tr>
+    <tr><td>Google Maps профиль</td><td>Входящие по «електрик поруч»</td><td>Завести после первых 5 отзывов</td><td>0</td></tr>
+  </table></div>
+  <p><b>Воронка, которую считать каждую неделю:</b> отклики → звонки → замеры → сметы → заказы. Много откликов и нет заказов — проблема в цене или фото; мало откликов — в канале.</p>
+</section>
+
+<section>
+  <h2><span class="qf">QF5</span>План на 3 месяца</h2>
+  <p>Месяц 1 покупает отзывы, месяц 2 — нишу, месяц 3 — деньги.</p>
+  <div class="months">
+    <div class="month">
+      <h3 style="margin:0">1. Запуск · 14.10 – 15.11</h3>
+      <span class="goal">5–10 тыс. грн · 5 отзывов</span>
+      <ul class="tasks">
+        <li><label><input type="checkbox" id="m1a"><span>Сфотографировать 5 щитов, инвертор, свою проводку; подписать «что сделал»</span></label></li>
+        <li><label><input type="checkbox" id="m1b"><span>Собрать цены конкурентов и сделать прайс</span></label></li>
+        <li><label><input type="checkbox" id="m1c"><span>Профиль на Kabanchik + объявление на OLX</span></label></li>
+        <li><label><input type="checkbox" id="m1d"><span>Короткий текст в чат своего ЖК</span></label></li>
+        <li><label><input type="checkbox" id="m1e"><span>Тёплый пост + 20–30 личных сообщений</span></label></li>
+        <li><label><input type="checkbox" id="m1f"><span>Сайт-портфолио ground-zero (Next.js, своя тема) — опубликовать</span></label></li>
+        <li><label><input type="checkbox" id="m1g"><span>Брать мелкие заказы ради отзывов, после каждого — просить отзыв</span></label></li>
+        <li><label><input type="checkbox" id="m1h"><span>Шаблон сметы и PDF-пакета «схема + фото» для клиента</span></label></li>
+        <li><label><input type="checkbox" id="m1i"><span>Вести учёт: часы (с дорогой и замерами), доход, канал заказа</span></label></li>
+      </ul>
+    </div>
+    <div class="month">
+      <h3 style="margin:0">2. Ниша · 16.11 – 15.12</h3>
+      <span class="goal">15–30 тыс. грн · 10 отзывов</span>
+      <ul class="tasks">
+        <li><label><input type="checkbox" id="m2a"><span>Отдельное объявление «щити та резервне живлення» под зимний спрос</span></label></li>
+        <li><label><input type="checkbox" id="m2b"><span>Найти 2–3 прорабов или бригады, сделать первый субподряд</span></label></li>
+        <li><label><input type="checkbox" id="m2c"><span>Договориться с магазином материалов о рекомендациях</span></label></li>
+        <li><label><input type="checkbox" id="m2d"><span>Поднять цены до медианы после 5 отзывов</span></label></li>
+        <li><label><input type="checkbox" id="m2e"><span>Отказываться от мелочи дальше 30 минут дороги</span></label></li>
+        <li><label><input type="checkbox" id="m2f"><span>Решить вопрос с КВЕД и группой по электробезопасности</span></label></li>
+      </ul>
+    </div>
+    <div class="month">
+      <h3 style="margin:0">3. Объекты · 16.12 – 15.01</h3>
+      <span class="goal">30–50 тыс. грн · 15 отзывов</span>
+      <ul class="tasks">
+        <li><label><input type="checkbox" id="m3a"><span>Взять один объект «электрика под ключ» в 1–2-комнатной квартире</span></label></li>
+        <li><label><input type="checkbox" id="m3b"><span>Google Maps профиль с отзывами</span></label></li>
+        <li><label><input type="checkbox" id="m3c"><span>Поднять цены ещё на 10–15%, если загрузка полная</span></label></li>
+        <li><label><input type="checkbox" id="m3d"><span>Подвести итог по метрикам ниже</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="qf">QF6</span>Документы, допуск, риски</h2>
+  <p>Для частных заказов в квартирах документ о квалификации почти не спрашивают — продают фото и отзывы. Два шага во втором месяце:</p>
+  <ul class="tasks">
+    <li><label><input type="checkbox" id="d1"><span><b>Группа по электробезопасности (III).</b> Учебные центры в Киеве обучают и проверяют знания на II–V группы, в том числе по Zoom. Узнать цену в 2–3 центрах. Удостоверение — аргумент для прорабов и осторожных клиентов.</span></label></li>
+    <li><label><input type="checkbox" id="d2"><span><b>Налоги.</b> Если ФОП уже есть — проверить у бухгалтера, можно ли добавить КВЕД 43.21 «Електромонтажні роботи» в твоей группе и как это сочетается с наймом в институте.</span></label></li>
+  </ul>
+  <h3>Чего не брать вообще</h3>
+  <ul>
+    <li>Работы до счётчика, на этажных щитах и вводе — это зона ДТЕК и ОСББ</li>
+    <li>Подключение инвертора с вмешательством во ввод без согласования с управляющей компанией</li>
+    <li>Объекты, где клиент требует экономить на сечении кабеля или УЗО</li>
+  </ul>
+  <p><b>Защита себя:</b> смета и перечень работ письменно (Viber подходит), фото до и после, проверка УЗО и сопротивления изоляции перед сдачей. Ошибка в электрике — это пожар у клиента, а не баг.</p>
+</section>
+
+<section>
+  <h2><span class="qf">QF7</span>Точка решения · 15.01.2027</h2>
+  <p>Итог по двум цифрам: доход за третий месяц и чистая ставка за час (доход минус дорога и расходники, делённый на все часы, включая замеры и сметы).</p>
+  <div class="tbl"><table>
+    <tr><th>Результат за месяц 3</th><th>Решение</th></tr>
+    <tr><td>≥ 30 тыс. грн и ≥ 350 грн/час</td><td>Продолжать, поднимать цены, искать постоянного прораба</td></tr>
+    <tr><td>15–30 тыс. грн</td><td>Оставить как подработку, брать только щиты и объекты</td></tr>
+    <tr><td>&lt; 15 тыс. грн или &lt; 250 грн/час</td><td>Закрыть эксперимент, вернуть время на свой ремонт</td></tr>
+  </table></div>
+  <h3>Чего не делать</h3>
+  <ul>
+    <li>Не покупать новый инструмент под эксперимент до первых 20 тыс. грн дохода</li>
+    <li>Не работать без письменной сметы</li>
+    <li>Не брать мелкие вызовы через весь город после первого месяца</li>
+    <li>Не продлевать эксперимент «ещё на месяц» без новой цели и срока</li>
+  </ul>
+</section>
+
+<footer>Источники цен: <a href="https://www.karpaty.net.ua/?p=31633">karpaty.net.ua</a>, <a href="https://www.unian.ua/society/yak-zrobiti-dodatkovi-rozetki-v-kvartiri-skilki-ce-koshtuye-i-shcho-dlya-cogo-potribno-13373466.html">УНІАН</a>, <a href="https://www.work.ua/en/salary-kyiv-electric/">Work.ua</a>, <a href="https://www.education.ua/courses/51019/">education.ua</a>. Отметки задач сохраняются в этом браузере.</footer>
+</main>
+<script>
+(function(){
+  var KEY="elektryk-plan-tasks";
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+  document.querySelectorAll('.tasks input[type=checkbox]').forEach(function(cb){
+    if(state[cb.id])cb.checked=true;
+    cb.addEventListener('change',function(){
+      state[cb.id]=cb.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}
+    });
+  });
+})();
+</script>
+</body>
+</html>

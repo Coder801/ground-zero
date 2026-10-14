@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
-/* `theme/` is the untouched original purchase — keep its classes out of the build. */
+/* `theme/` (original purchase) and `docs/` (standalone HTML) — keep their classes out of the build. */
 @source not "../../theme";
+@source not "../../docs";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

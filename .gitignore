@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated from docs/ by scripts/sync-docs.mjs
+/public/3-month-plan.html

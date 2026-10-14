@@ -109,6 +109,15 @@ public/
 
 Без Git: `npm run build && npx wrangler pages deploy out --project-name=<назва>`.
 
+## Додаткові сторінки з `docs/`
+
+`docs/elektryk-plan.html` — окрема HTML-сторінка (не частина лендингу). Перед `dev`
+і `build` скрипт `scripts/sync-docs.mjs` копіює її в `public/3-month-plan.html`
+(згенерований файл, у git не потрапляє), і на сайті вона відкривається за адресою
+**`/3-month-plan`** (локально в `npm run dev` — `/3-month-plan.html`). Сторінка
+закрита від індексації (`noindex`) і не входить у sitemap, але доступна кожному,
+хто знає адресу. Редагуйте тільки файл у `docs/`.
+
 ## Оригінал теми
 
 Папка `theme/` — куплена тема в незмінному вигляді, лише для довідки. Вона виключена
