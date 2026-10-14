@@ -1,0 +1,4 @@
+theme/
+.next/
+out/
+package-lock.json
